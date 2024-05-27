@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer {
+  .bg-image {
+    background-color: black;
+    background-image: url('/background.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .text-gradient {
+    background: linear-gradient(180deg, white 50%, rgba(255, 255, 255, 0.3));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+@layer components {
+  .title {
+    @apply text-white text-5xl font-bold text-gradient;
+  }
+
+  .btns-container {
+    @apply flex justify-center gap-4;
+  }
+}
