@@ -1,10 +1,9 @@
 import Image from 'next/image'
 
-import { OtherProfileType } from '@/api/getMoreProfiles'
-import { MyProfileType } from '@/api/getMyProfile'
+import { MyProfile, OtherProfile } from '@/types/profile'
 
 interface ProfileProps {
-  profile: MyProfileType | OtherProfileType
+  profile: MyProfile | OtherProfile
 }
 
 export function Profile({ profile }: ProfileProps) {

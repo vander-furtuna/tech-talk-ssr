@@ -1,6 +1,4 @@
-import { api } from './api'
-
-export type OtherProfileType = {
+export interface OtherProfile {
   login: string
   id: number
   node_id: string
@@ -21,8 +19,19 @@ export type OtherProfileType = {
   site_admin: boolean
 }
 
-export async function getMoreProfiles() {
-  const { data } = await api.get<OtherProfileType[]>('users')
-
-  return data
+export interface MyProfile extends OtherProfile {
+  name: string
+  company: string
+  blog: string
+  location: string
+  email: string
+  hireable: boolean
+  bio: string
+  twitter_username: string
+  public_repos: number
+  public_gists: number
+  followers: number
+  following: number
+  created_at: string
+  updated_at: string
 }

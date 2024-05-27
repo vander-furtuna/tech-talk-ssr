@@ -1,18 +1,22 @@
 import { Metadata } from 'next'
 
-import { getMoreProfiles } from '@/api/getMoreProfiles'
 import { BackButton } from '@/components/BackButton'
 import { Link } from '@/components/Link'
 import { Profile } from '@/components/Profile'
+import { OtherProfile } from '@/types/profile'
 
 export const metadata: Metadata = {
   title: 'Mais Perfis',
 }
 
-async function getProfiles() {
-  const data = await getMoreProfiles()
+async function getProfiles(): Promise<OtherProfile[]> {
+  const data = await fetch('https://api.github.com/users', {
+    next: {
+      revalidate: 60 * 10,
+    },
+  })
 
-  return data
+  return data.json()
 }
 
 export default async function More() {
