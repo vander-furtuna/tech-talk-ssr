@@ -30,6 +30,7 @@ export const metadata: Metadata = {
     description:
       'Veja como fazer requisições web e descubra a funcionalidade das aplicações de página única (MPA). Este site demonstra como buscar perfis do GitHub e exibir seus detalhes.',
     images: ['https://tech-talk-ssr.vercel.app/banner.png'],
+    url: 'https://tech-talk-ssr.vercel.app',
   },
 }
 
