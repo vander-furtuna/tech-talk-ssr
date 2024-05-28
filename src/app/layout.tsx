@@ -42,7 +42,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body
-        className={`${spaceGrotesk.variable} bg-image h-screen w-full font-sans`}
+        className={`${spaceGrotesk.variable} bg-image flex h-screen w-full flex-col items-center justify-start font-sans`}
       >
         <header className="flex w-full items-center justify-between p-8">
           <span className="text-white/80">Tech Talk / SSR</span>
