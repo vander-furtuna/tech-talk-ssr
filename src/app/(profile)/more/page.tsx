@@ -32,11 +32,11 @@ export default async function More() {
       <div className="grid w-full grid-cols-[repeat(auto-fill,minmax(200px,1fr))] justify-center gap-x-0 gap-y-8 px-8 py-16">
         {profiles
           ? profiles.map((profile) => (
-            <Profile profile={profile} key={profile.id} />
-          ))
+              <Profile profile={profile} key={profile.id} />
+            ))
           : Array.from({ length: 10 }).map((_, index) => (
-            <div key={index} className="size-40 animate-pulse bg-white/60" />
-          ))}
+              <div key={index} className="size-40 animate-pulse bg-white/60" />
+            ))}
       </div>
     </>
   )
